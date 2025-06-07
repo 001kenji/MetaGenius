@@ -23,11 +23,11 @@ const ProtectedRoute = ({ children,isAuthenticated }) => {
 
   const location = useLocation();
 
-  if (!isAuthenticated) {
-    // Redirect to login and save the attempted url
+  // if (!isAuthenticated) {
+  //   // Redirect to login and save the attempted url
     
-    return <Navigate to="/login" state={{ from: location.pathname }} replace />;
-  }
+  //   return <Navigate to="/login" state={{ from: location.pathname }} replace />;
+  // }
   
   return children;
 };
@@ -98,9 +98,9 @@ function App({logout,FetchLogout ,isAuthenticated,load_user,GetCSRFToken}) {
               <Route 
                 path="/dashboard" 
                 element={
-{/*                   <ProtectedRoute isAuthenticated={isAuthenticated} > */}
+                   <ProtectedRoute isAuthenticated={isAuthenticated} > 
                     <Dashboard />
-{/*                   </ProtectedRoute> */}
+                   </ProtectedRoute> 
                 } 
               />
               <Route path="/login" element={<LoginForm />} />
