@@ -62,6 +62,9 @@ function Navbar({ theme,logout, toggleTheme }) {
             </>
           ) : (
             <>
+              <Link to="/dashboard" className="hover:text-blue-500 transition-colors">
+                Dashboard
+              </Link>
               <Link to="/login" className="hover:text-blue-500 transition-colors">
                 Login
               </Link>
@@ -130,6 +133,13 @@ function Navbar({ theme,logout, toggleTheme }) {
               </>
             ) : (
               <>
+                <Link 
+                  to="/dashboard" 
+                  className="py-2 hover:text-blue-500 transition-colors"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Dashboard
+                </Link>
                 <Link 
                   to="/login" 
                   className="py-2 hover:text-blue-500 transition-colors"
