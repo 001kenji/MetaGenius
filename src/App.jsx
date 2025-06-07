@@ -98,9 +98,9 @@ function App({logout,FetchLogout ,isAuthenticated,load_user,GetCSRFToken}) {
               <Route 
                 path="/dashboard" 
                 element={
-                  <ProtectedRoute isAuthenticated={isAuthenticated} >
+{/*                   <ProtectedRoute isAuthenticated={isAuthenticated} > */}
                     <Dashboard />
-                  </ProtectedRoute>
+{/*                   </ProtectedRoute> */}
                 } 
               />
               <Route path="/login" element={<LoginForm />} />
