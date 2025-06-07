@@ -86,6 +86,15 @@ function App({logout,FetchLogout ,isAuthenticated,load_user,GetCSRFToken}) {
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
+  // <Route 
+  //               path="/dashboard" 
+  //               element={
+  //                  <ProtectedRoute isAuthenticated={isAuthenticated} > 
+  //                   <Dashboard />
+  //                  </ProtectedRoute> 
+  //               } 
+  //             />
+
   return (
     <Router>
       <AuthProvider>
@@ -97,11 +106,7 @@ function App({logout,FetchLogout ,isAuthenticated,load_user,GetCSRFToken}) {
               <Route path="/" element={<Home />} />
               <Route 
                 path="/dashboard" 
-                element={
-                   <ProtectedRoute isAuthenticated={isAuthenticated} > 
-                    <Dashboard />
-                   </ProtectedRoute> 
-                } 
+                element={ <Dashboard />} 
               />
               <Route path="/login" element={<LoginForm />} />
               <Route path="/register" element={<RegisterForm />} />
