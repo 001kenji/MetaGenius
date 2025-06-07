@@ -1,0 +1,7 @@
+Confirm Your Email Address
+
+Please confirm that {{ email }} is your email address by visiting this link:
+
+{{ protocol }}://{{ domain }}{% url 'djoser:confirm_email' uid=uid token=token %}
+
+If you didn't request this email, please ignore it.

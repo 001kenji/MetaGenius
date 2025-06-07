@@ -1,0 +1,9 @@
+Welcome to MetaGenius!
+
+Thank you for registering. Please visit the following link to activate your account:
+
+{{ protocol }}://{{ domain }}{% url 'djoser:activate' uid=uid token=token %}
+
+If you didn't request this email, please ignore it.
+
+This link will expire in {{ timeout }} hours.

@@ -1,0 +1,84 @@
+# Django and REST Framework
+Django==5.1.7
+djangorestframework==3.16.0
+djangorestframework-simplejwt==5.5.0
+djoser==2.3.1
+django-cors-headers==4.7.0
+
+# Database
+psycopg2-binary==2.9.10
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Redis and Celery
+redis==6.2.0
+celery==5.5.3
+
+# OpenAI API
+openai==1.6.1
+
+# Google API for YouTube
+google-api-python-client==2.94.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.2
+
+# Image processing
+Pillow==11.1.0
+
+# Production dependencies
+gunicorn==21.2.0
+whitenoise==6.6.0
+
+PyJWT==2.8.0
+cryptography==41.0.7
+dj-database-url==2.1.0
+google-auth==2.23.4
+
+
+aiobreaker
+aiofiles
+aiohappyeyeballs
+aiohttp
+aiosignal
+annotated-types
+anyio
+APScheduler
+argon2-cffi
+argon2-cffi-bindings
+asgiref
+attrs
+autobahn
+Automat
+babel
+better-ffmpeg-progress
+cachetools
+certifi
+cffi
+channels
+channels-redis
+chardet
+charset-normalizer
+circuitbreaker
+colorama
+configparser
+constantly
+crontab
+CurrencyConverter
+daphne
+decorator
+defusedxml
+django-channels
+django-jazzmin
+django-json-widget
+django-templated-mail
+docker
+docopt
+ecdsa
+ffmpeg-progress-yield
+ffmpeg-python
+filelock
+forex-python
+frozenlist
+fsspec
+future

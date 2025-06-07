@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaGenius</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #4a5568;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* Card Container */
+        .email-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 
+                        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Header with subtle gradient */
+        .card-header {
+            background: linear-gradient(135deg, #4a6fa5 0%, #166d67 100%);
+            padding: 28px 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .card-header:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: #ffffff;
+            border-radius: 0 0 12px 12px;
+        }
+        
+        .card-title {
+            color: #ffffff;
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Card Body */
+        .card-body {
+            padding: 32px;
+            background: #ffffff;
+        }
+        
+        /* Footer */
+        .card-footer {
+            padding: 20px;
+            text-align: center;
+            background: #f8fafc;
+            font-size: 13px;
+            color: #718096;
+            border-top: 1px solid #edf2f7;
+        }
+        
+        /* Typography */
+        h2 {
+            color: #2d3748;
+            margin-top: 0;
+            margin-bottom: 24px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        
+        /* Button */
+        .btn-primary {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #4a6fa5;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            margin: 25px 0;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .btn-primary:hover {
+            background: #3a5a8f;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Link */
+        .text-link {
+            color: #4a6fa5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-card {
+                border-radius: 0;
+                box-shadow: none;
+                border-left: none;
+                border-right: none;
+            }
+            
+            .card-body {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-card">
+        <div class="card-header">
+            <h1 class="card-title">MetaGenius</h1>
+        </div>
+        
+        <div class="card-body">
+            {% block email_content %}{% endblock %}
+        </div>
+        
+        <div class="card-footer">
+            <p>If you didn't request this email, please ignore it.</p>
+            <p>&copy; {% now "Y" %} MetaGenius. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

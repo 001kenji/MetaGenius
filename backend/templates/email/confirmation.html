@@ -1,0 +1,36 @@
+{% extends "email/base_email.html" %}
+
+{% block email_title %}Account Successfully Activated{% endblock %}
+
+{% block email_content %}
+    <h2 style="color: #2c3e50; margin-top: 0; font-size: 24px;">Welcome to MetaGenius!</h2>
+
+    <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.6;">
+        Hi {{ name }},
+    </p>
+
+    <p style="margin-bottom: 20px; font-size: 16px; line-height: 1.6;">
+        Your account has been successfully activated. You can now sign in and start exploring all the features MetaGenius has to offer.
+    </p>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="{{ login_url }}" 
+           style="display: inline-block;
+                  padding: 14px 28px;
+                  background: #4caf50;
+                  color: #ffffff !important;
+                  text-decoration: none;
+                  border-radius: 6px;
+                  font-weight: bold;
+                  font-size: 16px;
+                  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+                  transition: all 0.3s ease;">
+            Go to Login
+        </a>
+    </div>
+   
+    <p style="margin-top: 30px; font-size: 14px; color: #777;">
+        Thank you for joining us!  
+        <br>MetaGenius Team
+    </p>
+{% endblock %}
